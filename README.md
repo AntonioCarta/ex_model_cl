@@ -1,7 +1,7 @@
 # Ex-model CL
 Ex-model continual learning is a setting where a stream of experts (i.e. model's parameters) is available and a CL model learns from them without access to the original data.
 
-![exml.png](exml.png)
+![ExML scenario](https://github.com/AntonioCarta/ex_model_cl/blob/main/exml.PNG)
 
 **NOTE: This repository is a work in progress. It's a heavy refactoring of the code from our internal repository to make it easier to understand and reuse by other researchers. At some point we plan to integrate the strategies and benchmarks directly in Avalanche.**
 
