@@ -1,0 +1,34 @@
+# launch config
+dataroot: '/raid/carta'
+logdir: '/raid/carta/ex_model_cl/logs/_final_results/mt_cifar10'
+assess_runs: 5
+no_ray: false
+debug: false
+
+# hardware config
+max_cpus: 30
+cpus_per_job: 3
+cuda: true
+max_gpus: 5
+gpus_per_job: 1
+
+# scenario
+experiment_type: train_ed
+scenario: mt_cifar10
+model: resnet
+
+### hyper-params
+strategy: replay_ed
+
+buffer_size: 5000
+num_iter_per_exp: 50000
+train_mb_size: 128
+lr: 0.1
+
+loss_type: mse
+reset_model: false
+
+init_from_expert: false
+bias_normalization: false
+
+ce_loss: true

@@ -1,0 +1,34 @@
+# launch config
+dataroot: '/raid/carta'
+logdir: '/raid/carta/ex_model_cl/logs/debug'
+assess_runs: 5
+no_ray: true
+debug: true
+
+# scenario
+scenario: mt_cifar10
+strategy: aux_data_ed
+experiment_type: train_ed
+model: masked_resnet
+
+bias_normalization: false
+loss_type: mse
+lr: 0.001
+init_from_expert: false
+ce_loss: true
+num_iter_per_exp: 20000
+reset_model: false
+train_mb_size: 10
+
+buffer_iter: 1000
+
+grid:
+  buffer_size:
+    - 10
+    - 50
+    - 100
+    - 200
+    - 400
+    - 1000
+    - 2500
+    - 5000

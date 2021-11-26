@@ -1,0 +1,24 @@
+# launch config
+dataroot: '/raid/carta'
+logdir: './logs/debug'
+assess_runs: 1
+no_ray: false
+debug: false
+metric_name: 'Top1_Acc_Stream/eval_phase/train_stream/Task000'
+
+# hardware config
+max_cpus: 30
+cpus_per_job: 3
+cuda: true
+max_gpus: 4
+gpus_per_job: 0.5
+
+### main hyper-params
+model: resnet
+
+lr: 1e-1
+train_mb_size: 10
+
+## buffer hp
+buffer_iter: 1000
+buffer_wd: 0.001
